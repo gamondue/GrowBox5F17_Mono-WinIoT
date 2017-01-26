@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>1d7bedad-9d3f-4f4f-91e6-0a30548493c4</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GrowBoxShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AerationDevice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CO2Sensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Device.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Device_OnOffShift.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LCD1602Shift.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LightDevice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LightSensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OutShiftRegister.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PwmDevice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RelativeHumiditySensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SoilMoistureSensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StepMotorEndStopShift.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TemperatureSensor.cs" />
+  </ItemGroup>
+</Project>

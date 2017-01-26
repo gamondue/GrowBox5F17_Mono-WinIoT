@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="AppRaspGrowBox.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppRaspGrowBox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="582.821">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-483,0">
+        <TextBox x:Name="StatusText" HorizontalAlignment="Left" Margin="122,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="435" Height="268"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="235,318,0,0" TextWrapping="Wrap" Text="Lux =" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="222,343,0,0" TextWrapping="Wrap" Text="Gradi =" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="222,418,0,0" TextWrapping="Wrap" Text="RH% =" VerticalAlignment="Top" RenderTransformOrigin="0.391,-5.5"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="197,393,0,0" TextWrapping="Wrap" Text="CO2 PPM =" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="135,368,0,0" TextWrapping="Wrap" Text="Umidità Terreno % =" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="424,20,0,0" TextWrapping="Wrap" Text="Messaggi" VerticalAlignment="Top" Width="133"/>
+        <TextBlock x:Name="textLux" HorizontalAlignment="Left" Margin="292,318,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textGradi" HorizontalAlignment="Left" Margin="292,343,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textRH" HorizontalAlignment="Left" Margin="292,422,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textPPM" HorizontalAlignment="Left" Margin="292,393,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textUT" HorizontalAlignment="Left" Margin="292,368,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="188,461,0,0" TextWrapping="Wrap" Text="Voltmetro =" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textVoltmetro" HorizontalAlignment="Left" Margin="292,461,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
