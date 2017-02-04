@@ -13,11 +13,17 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GrowBoxShared", "GrowBoxSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspGrowBoxWinIoT", "RaspGrowBoxWinIoT\RaspGrowBoxWinIoT.csproj", "{CDF30DA5-DAC8-4EB2-8E0E-366D6E6EE0BD}"
 EndProject
+<<<<<<< HEAD
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Device_OnOffShift", "Test_Device_OnOffShift\Test_Device_OnOffShift.csproj", "{285DCB28-D400-4620-BAA8-0456C8E3DA40}"
+=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_PWM", "Test\Test_PWM\Test_PWM.csproj", "{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C}"
+>>>>>>> 651aab90a2f9cbc72de48621fec4ae07f58297f8
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		GrowBoxSharedMono\GrowBoxShared.projitems*{1d7bedad-9d3f-4f4f-91e6-0a30548493c4}*SharedItemsImports = 13
+		GrowBoxSharedMono\GrowBoxShared.projitems*{285dcb28-d400-4620-baa8-0456c8e3da40}*SharedItemsImports = 4
+		GrowBoxShared\GrowBoxShared.projitems*{285dcb28-d400-4620-baa8-0456c8e3da40}*SharedItemsImports = 4
 		GrowBoxShared\GrowBoxShared.projitems*{769a6619-01b8-47d1-9e75-c34e877ff20d}*SharedItemsImports = 13
 		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
 		GrowBoxShared\GrowBoxShared.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
@@ -72,6 +78,24 @@ Global
 		{CDF30DA5-DAC8-4EB2-8E0E-366D6E6EE0BD}.Release|x86.ActiveCfg = Release|x86
 		{CDF30DA5-DAC8-4EB2-8E0E-366D6E6EE0BD}.Release|x86.Build.0 = Release|x86
 		{CDF30DA5-DAC8-4EB2-8E0E-366D6E6EE0BD}.Release|x86.Deploy.0 = Release|x86
+<<<<<<< HEAD
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Debug|ARM.Build.0 = Debug|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Debug|x64.Build.0 = Debug|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Debug|x86.Build.0 = Debug|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Release|ARM.ActiveCfg = Release|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Release|ARM.Build.0 = Release|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Release|x64.ActiveCfg = Release|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Release|x64.Build.0 = Release|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Release|x86.ActiveCfg = Release|Any CPU
+		{285DCB28-D400-4620-BAA8-0456C8E3DA40}.Release|x86.Build.0 = Release|Any CPU
+=======
 		{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -88,6 +112,7 @@ Global
 		{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C}.Release|x64.Build.0 = Release|Any CPU
 		{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C}.Release|x86.ActiveCfg = Release|Any CPU
 		{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C}.Release|x86.Build.0 = Release|Any CPU
+>>>>>>> 651aab90a2f9cbc72de48621fec4ae07f58297f8
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
