@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspGrowBoxWinIoT", "RaspGr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_PWM", "Test\Test_PWM\Test_PWM.csproj", "{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7049E1A9-5AC4-4E3D-AF71-402BBFCF4EA4}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		GrowBoxSharedMono\GrowBoxShared.projitems*{1d7bedad-9d3f-4f4f-91e6-0a30548493c4}*SharedItemsImports = 13
@@ -91,5 +93,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C} = {7049E1A9-5AC4-4E3D-AF71-402BBFCF4EA4}
 	EndGlobalSection
 EndGlobal
