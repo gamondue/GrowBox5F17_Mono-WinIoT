@@ -100,3 +100,77 @@ Global
 		{70A04FC3-6C19-417A-BFEA-5ECFE7C18C0C} = {7049E1A9-5AC4-4E3D-AF71-402BBFCF4EA4}
 	EndGlobalSection
 EndGlobal
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspGrowBoxMono", "RaspGrowBoxMono\RaspGrowBoxMono.csproj", "{DD24D63D-1573-445D-8F43-D27901BD7D6A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GrowboxSharedWinIoT", "GrowboxSharedWinIoT\GrowboxSharedWinIoT.shproj", "{FF80ADB2-BA7B-437D-9FB5-E2F71BF8F21A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GrowBoxSharedMono", "GrowBoxSharedMono\GrowBoxSharedMono.shproj", "{1D7BEDAD-9D3F-4F4F-91E6-0A30548493C4}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GrowBoxShared", "GrowBoxShared\GrowBoxShared.shproj", "{769A6619-01B8-47D1-9E75-C34E877FF20D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_DigitalMonoIO", "Test_DigitalMonoIO\Test_DigitalMonoIO.csproj", "{2C303E3F-1320-40DD-B11E-B7198BBA8859}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		GrowBoxShared\GrowBoxShared.projitems*{2c303e3f-1320-40dd-b11e-b7198bba8859}*SharedItemsImports = 4
+		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{2c303e3f-1320-40dd-b11e-b7198bba8859}*SharedItemsImports = 4
+		GrowBoxSharedMono\GrowBoxShared.projitems*{2c303e3f-1320-40dd-b11e-b7198bba8859}*SharedItemsImports = 4
+		GrowBoxSharedMono\GrowBoxShared.projitems*{1d7bedad-9d3f-4f4f-91e6-0a30548493c4}*SharedItemsImports = 13
+		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{ff80adb2-ba7b-437d-9fb5-e2f71bf8f21a}*SharedItemsImports = 13
+		GrowBoxShared\GrowBoxShared.projitems*{769a6619-01b8-47d1-9e75-c34e877ff20d}*SharedItemsImports = 13
+		GrowBoxShared\GrowBoxShared.projitems*{dd24d63d-1573-445d-8f43-d27901bd7d6a}*SharedItemsImports = 4
+		GrowBoxSharedMono\GrowBoxShared.projitems*{dd24d63d-1573-445d-8f43-d27901bd7d6a}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Debug|ARM.Build.0 = Debug|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Debug|x64.Build.0 = Debug|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Debug|x86.Build.0 = Debug|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Release|ARM.ActiveCfg = Release|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Release|ARM.Build.0 = Release|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Release|x64.ActiveCfg = Release|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Release|x64.Build.0 = Release|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD24D63D-1573-445D-8F43-D27901BD7D6A}.Release|x86.Build.0 = Release|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Debug|ARM.Build.0 = Debug|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Debug|x64.Build.0 = Debug|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Debug|x86.Build.0 = Debug|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Release|ARM.Build.0 = Release|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Release|x64.ActiveCfg = Release|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Release|x64.Build.0 = Release|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C303E3F-1320-40DD-B11E-B7198BBA8859}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
