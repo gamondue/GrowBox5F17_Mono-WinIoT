@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrowBoxShared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,9 @@ namespace Test_PWM
     {
         static void Main(string[] args)
         {
-
+            PwmDevice pwm = new PwmDevice();
+            DigitalConverterMCP3208 adc = new GrowBoxShared.DigitalConverterMCP3208();
+            TemperatureSensor t = new TemperatureSensor(adc, 3);
         }
     }
 }
