@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test_TemperatureSensor
+namespace GrowBoxShared
 {
     class Program
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
