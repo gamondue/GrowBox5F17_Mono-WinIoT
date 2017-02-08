@@ -20,21 +20,22 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_RelativeHumiditySensor", "Test\Test_RelativeHumiditySensor\Test_RelativeHumiditySensor.csproj", "{553ED9F2-8026-4233-8AAD-3F163267FA56}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_TemperatureSensor", "Test\Test_TemperatureSensor\Test_TemperatureSensor.csproj", "{363C4658-E4F9-4BC0-9FFF-07EB4402BEBD}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_PwmDevice", "..\..\GrowBox5F17_Mono-WinIoT_CLONE\Test_PwmDevice\Test_PwmDevice.csproj", "{8BD3BFAE-91A2-473D-B846-A838038B30A6}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		GrowBoxSharedMono\GrowBoxShared.projitems*{1d7bedad-9d3f-4f4f-91e6-0a30548493c4}*SharedItemsImports = 13
 		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{ff80adb2-ba7b-437d-9fb5-e2f71bf8f21a}*SharedItemsImports = 13
-		GrowBoxShared\GrowBoxShared.projitems*{769a6619-01b8-47d1-9e75-c34e877ff20d}*SharedItemsImports = 13
 		..\..\GrowBox5F17_Mono-WinIoT_CLONE\GrowBoxSharedMono\GrowBoxShared.projitems*{8bd3bfae-91a2-473d-b846-a838038b30a6}*SharedItemsImports = 4
 		..\..\GrowBox5F17_Mono-WinIoT_CLONE\GrowBoxShared\GrowBoxShared.projitems*{8bd3bfae-91a2-473d-b846-a838038b30a6}*SharedItemsImports = 4
-		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
-		GrowBoxShared\GrowBoxShared.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
+		GrowBoxShared\GrowBoxShared.projitems*{769a6619-01b8-47d1-9e75-c34e877ff20d}*SharedItemsImports = 13
+		GrowBoxShared\GrowBoxShared.projitems*{363c4658-e4f9-4bc0-9fff-07eb4402bebd}*SharedItemsImports = 4
+		GrowBoxShared\GrowBoxShared.projitems*{553ed9f2-8026-4233-8aad-3f163267fa56}*SharedItemsImports = 4
 		GrowBoxSharedMono\GrowBoxShared.projitems*{dd24d63d-1573-445d-8f43-d27901bd7d6a}*SharedItemsImports = 4
 		GrowBoxShared\GrowBoxShared.projitems*{dd24d63d-1573-445d-8f43-d27901bd7d6a}*SharedItemsImports = 4
-		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
 		GrowBoxShared\GrowBoxShared.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
+		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
