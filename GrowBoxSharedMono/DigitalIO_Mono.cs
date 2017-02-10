@@ -29,7 +29,7 @@ namespace GrowBoxShared
         /// </param>
         public DigitalIO(ConnectorPin ConnectorPin, GpioPinDriveMode DriveMode)
         {
-            connectorPin = (ConnectorPin) ConnectorPin;
+            connectorPin = (ConnectorPin)ConnectorPin;
             processorPin = connectorPin.ToProcessor();
             PinDirection dir;
             if (DriveMode == GpioPinDriveMode.Input)
@@ -60,13 +60,13 @@ namespace GrowBoxShared
             {
                 try
                 {
-                    if (Enum.GetName(typeof(ConnectorPin), 
+                    if (Enum.GetName(typeof(ConnectorPin),
                         pin).ToString().IndexOf(NumConnectorPin.ToString(), 0) >= 0)
-                    { 
+                    {
                         connectorPin = pin;
                         processorPin = connectorPin.ToProcessor();
                         Console.WriteLine("Numero pin: {0} Definizione pin:{1}",
-                            NumConnectorPin, Enum.GetName(typeof(ConnectorPin), pin).ToString()); 
+                            NumConnectorPin, Enum.GetName(typeof(ConnectorPin), pin).ToString());
                     }
                     PinDirection dir;
                     if (DriveMode == GpioPinDriveMode.Input)
@@ -74,7 +74,7 @@ namespace GrowBoxShared
                     else if (DriveMode == GpioPinDriveMode.Output)
                         dir = PinDirection.Output;
                     else
-                        throw new NotImplementedException("Drive mode dell'I/O non ancora possibile con Mono"); 
+                        throw new NotImplementedException("Drive mode dell'I/O non ancora possibile con Mono");
 
                     driver.Allocate(processorPin, dir);
                 }

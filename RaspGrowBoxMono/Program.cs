@@ -91,51 +91,56 @@ namespace RaspGrowBoxMono
         }
 
         private static void test()
-        {   // per test Adc: definizione del convertitore analogico digitale
+        {
+            //// test per input digitali ?? funziona ?? 
+            //TestAllDigitalInputs();
+            //return;
+
+            // per test Adc: definizione del convertitore analogico digitale
             DigitalConverterMCP3208 adc = new DigitalConverterMCP3208();
 
             // per test IO digitale: definizione di canali di IO digitale
-            const int chanLed1 = 40;
-            const int chanLed2 = 38;
-            const int chanButton1 = 37;
-            const int chanButton2 = 35;
-            DigitalIO pinIn1 = new DigitalIO(chanButton1, GpioPinDriveMode.Input);
-            DigitalIO pinIn2 = new DigitalIO(chanButton2, GpioPinDriveMode.Input);
-            DigitalIO pinOut1 = new DigitalIO(chanLed1, GpioPinDriveMode.Output);
-            DigitalIO pinOut2 = new DigitalIO(chanLed2, GpioPinDriveMode.Output);
+            //const int chanLed1 = 40;
+            //const int chanLed2 = 38;
+            //const int chanButton1 = 37;
+            //const int chanButton2 = 35;
+            //DigitalIO pinIn1 = new DigitalIO(chanButton1, GpioPinDriveMode.Input);
+            //DigitalIO pinIn2 = new DigitalIO(chanButton2, GpioPinDriveMode.Input);
+            //DigitalIO pinOut1 = new DigitalIO(chanLed1, GpioPinDriveMode.Output);
+            //DigitalIO pinOut2 = new DigitalIO(chanLed2, GpioPinDriveMode.Output);
             // si può anche fare così: 
-            //DigitalIO pinIn1 = new DigitalIO(ConnectorPin.P1Pin37, GpioPinDriveMode.Input);
-            //DigitalIO pinOut1 = new DigitalIO(ConnectorPin.P1Pin40, GpioPinDriveMode.Output);
-            //DigitalIO pinIn2 = new DigitalIO(ConnectorPin.P1Pin35, GpioPinDriveMode.Input);
-            //DigitalIO pinOut2 = new DigitalIO(ConnectorPin.P1Pin38, GpioPinDriveMode.Output);
+            DigitalIO pinIn1 = new DigitalIO(ConnectorPin.P1Pin38, GpioPinDriveMode.Input);
+            DigitalIO pinOut1 = new DigitalIO(ConnectorPin.P1Pin37, GpioPinDriveMode.Output);
+            DigitalIO pinIn2 = new DigitalIO(ConnectorPin.P1Pin40, GpioPinDriveMode.Input);
+            DigitalIO pinOut2 = new DigitalIO(ConnectorPin.P1Pin35, GpioPinDriveMode.Output);
 
             // definizioni per test output digitali su shift register
             OutShiftRegister shift = new OutShiftRegister(16, 25, 24, 23);
             Device_OnOffShift irrigator = new Device_OnOffShift(shift, 8);    // ottavo pin dello shift register
             Device_OnOffShift humidifier = new Device_OnOffShift(shift, 2);   // secondo pin dello shift register
 
-            //TestAllDigitalInputs(pinTuttiIn);
-            //return;
-
             while (true)
             {
                 Console.CursorTop = 0;
                 Console.Clear();
 
-                ReadAllAdc();
+                //ReadAllAdc();
 
                 // test two digital inputs
-                Console.WriteLine("Canale bottone 1: {0}, Canale bottone 2: {1} ",
-                                    chanButton1, chanButton2);
-                Console.WriteLine("Bottone 1: {0}, Bottone 2: {1} ",
-                    pinIn1.Read().ToString(), pinIn2.Read().ToString());
+                Console.WriteLine("Bottone 1: Canale {0}, Valore {1} ",
+                    pinIn1.connectorPin.ToString(), pinIn1.Read().ToString());
+                Console.WriteLine("Bottone 2: Canale {0}, Valore {1} ",
+                    pinIn2.connectorPin.ToString(), pinIn2.Read().ToString());
+
                 // test two digital outputs
-                Console.WriteLine("\r\nCanale LED 1: {0}, Canale LED 2: {1} ",
-                                    chanLed1, chanLed2);
+                Console.WriteLine("\r\nLED 1: Canale {0}, Valore: {1} ",
+                    pinOut1.connectorPin.ToString(), pinIn1.Read().ToString());
                 pinOut1.Write(pinIn1.Read());
+                Console.WriteLine("LED 2: Canale {0}, Valore: {1} ",
+                    pinOut2.connectorPin.ToString(), pinIn2.Read().ToString());
                 pinOut2.Write(pinIn2.Read());
 
-                ActuateShiftRegister();
+                //ActuateShiftRegister();
 
                 Thread.Sleep(500);
             }
@@ -167,9 +172,13 @@ namespace RaspGrowBoxMono
             {
                 foreach (DigitalIO input in pinTuttiIn)
                 {
-                    Console.Write("{0}:{1}|", Enum.GetName(typeof(ConnectorPin), input.connectorPin)
+                    Console.Write("{0}:{1}\n", 
+                        Enum.GetName (typeof(ConnectorPin), input.connectorPin)
                         , input.Read());
+
                 }
+                Console.WriteLine();
+                Console.ReadLine();
             }
         }
 

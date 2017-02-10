@@ -15,7 +15,7 @@ namespace Test_OutShifRegister
         //TODO assegnare il lavoro ad un gruppo !!!!!
         static void Main(string[] args)
         {
-            OutShiftRegister sr = new GrowBoxShared.OutShiftRegister(16, 25, 24, 23);
+            OutShiftRegister sr = new GrowBoxShared.OutShiftRegister(16, 25, 24, 23); 
         }
     }
 }

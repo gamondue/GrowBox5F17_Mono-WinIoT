@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\dll\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\dll\Common.Logging.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Raspberry.IO">
       <HintPath>..\dll\Raspberry.IO.dll</HintPath>
     </Reference>
@@ -73,8 +79,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <Import Project="..\GrowBoxSharedMono\GrowBoxShared.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\Test\Test_DigitalMonoIO\Test_DigitalMonoIO.csproj">
+      <Project>{2C303E3F-1320-40DD-B11E-B7198BBA8859}</Project>
+      <Name>Test_DigitalMonoIO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\GrowBoxShared\GrowBoxShared.projitems" Label="Shared" />
+  <Import Project="..\GrowBoxSharedMono\GrowBoxShared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

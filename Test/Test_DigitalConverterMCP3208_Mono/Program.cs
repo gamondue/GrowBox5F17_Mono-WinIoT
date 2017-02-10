@@ -22,7 +22,7 @@ namespace Test_DigitalConverterMCP3208_Mono
                 {
                     Console.WriteLine(val);
                 }
-
+                Console.WriteLine();
 
                 Thread.Sleep(1000);
 
