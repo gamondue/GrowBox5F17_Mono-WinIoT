@@ -2,132 +2,73 @@
 using Raspberry.IO.GeneralPurpose;
 using GrowBoxShared;
 using System.Threading;
+using System.Collections.Generic;
+
 
 namespace Test_DigitalMonoIO
 {
+    class Program
+    {
+        //static private DigitalIO _pin;
+        static private GpioPinValue _pinValue;
 
-    // !!!! la classe DigitalIO, già fatta dal prof., andava USATA con questo programma, non RICOPIATA QUI !!!!!!!!!!!!!!!!!!!!!!!!!!
-    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // MONTI
+        /*private void Timer_Tick(object sender, object e)
+        {
+            if (_pinValue == GpioPinValue.High) _pinValue = GpioPinValue.Low;
+            else _pinValue = GpioPinValue.High;
+            _pin.Write(_pinValue);
+        }*/
 
-    //class DigitalIO
-    //{
-    //    public ConnectorPin connectorPin;
-    //    public ProcessorPin processorPin;
+        static void Main(string[] args)
+        {
+            DigitalConverterMCP3208 adc = new DigitalConverterMCP3208();
+            
+            DigitalIO pinIn1 = new DigitalIO(ConnectorPin.P1Pin38, GpioPinDriveMode.Input);
+            DigitalIO pinOut1 = new DigitalIO(ConnectorPin.P1Pin37, GpioPinDriveMode.Output);
+            DigitalIO pinIn2 = new DigitalIO(ConnectorPin.P1Pin40, GpioPinDriveMode.Input);
+            DigitalIO pinOut2 = new DigitalIO(ConnectorPin.P1Pin35, GpioPinDriveMode.Output);
 
-    //    IGpioConnectionDriver driver = GpioConnectionSettings.DefaultDriver;
+            // definizioni per test output digitali su shift register
+            OutShiftRegister shift = new OutShiftRegister(16, 25, 24, 23);
+            Device_OnOffShift irrigator = new Device_OnOffShift(shift, 8);    // ottavo pin dello shift register
+            Device_OnOffShift humidifier = new Device_OnOffShift(shift, 2);   // secondo pin dello shift register
 
-    //    /// <summary>
-    //    /// Costruttore che fa uso della classe ConnectorPin della libreria
-    //    /// Da non usare se si vuole mantenere il programma portabile fra 
-    //    /// Win 10 Iot e 
-    //    /// </summary>
-    //    /// <param name="ConnectorPin">
-    //    /// Oggetto ConnectorPin usato per questo IO digitale
-    //    /// </param>
-    //    /// <param name="IsInput">
-    //    /// Direzione dell'IO: se true è un Input, altrimenti è un output
-    //    /// </param>
-    //    public DigitalIO(ConnectorPin ConnectorPin, GpioPinDriveMode DriveMode)
-    //    {
-    //        connectorPin = (ConnectorPin)ConnectorPin;
-    //        processorPin = connectorPin.ToProcessor();
-    //        PinDirection dir;
-    //        if (DriveMode == GpioPinDriveMode.Input)
-    //            dir = PinDirection.Input;
-    //        else if (DriveMode == GpioPinDriveMode.Output)
-    //            dir = PinDirection.Output;
-    //        else
-    //            throw new NotImplementedException("Drive mode dell'I/O impossibile con Mono");
+            while (true)
+            {
+                Console.CursorTop = 0;
+                Console.Clear();
+                
+                // test two digital inputs
+                Console.WriteLine("Bottone 1: Canale {0}, Valore {1} ",
+                    pinIn1.connectorPin.ToString(), pinIn1.Read().ToString());
+                Console.WriteLine("Bottone 2: Canale {0}, Valore {1} ",
+                    pinIn2.connectorPin.ToString(), pinIn2.Read().ToString());
 
-    //        driver.Allocate(processorPin, dir);
-    //    }
-    //    /// <summary>
-    //    /// Costruttore che permette di indicare il canale da usare come integer.
-    //    /// Usa un trucco, perchè la libreria non supporta l'uso di un integer
-    //    /// per istanziare la classe di controllo dell'IO digitale
-    //    /// </summary>
-    //    /// <param name="NumConnectorPin">
-    //    /// Numero del canale 
-    //    /// E' il numero del piedino nel connettore Gpio del Raspberry Pi, NON quello 
-    //    /// del SoC Broadcom
-    //    /// </param>
-    //    /// <param name="IsInput">
-    //    /// Direzione dell'IO: se true è un Input, altrimenti è un output
-    //    /// </param>
-    //    public DigitalIO(int NumConnectorPin, GpioPinDriveMode DriveMode)
-    //    {
-    //        foreach (ConnectorPin pin in Enum.GetValues(typeof(ConnectorPin)))
-    //        {
-    //            try
-    //            {
-    //                if (Enum.GetName(typeof(ConnectorPin),
-    //                    pin).ToString().IndexOf(NumConnectorPin.ToString(), 0) >= 0)
-    //                {
-    //                    connectorPin = pin;
-    //                    processorPin = connectorPin.ToProcessor();
-    //                    Console.WriteLine("Numero pin: {0} Definizione pin:{1}",
-    //                        NumConnectorPin, Enum.GetName(typeof(ConnectorPin), pin).ToString());
-    //                }
-    //                PinDirection dir;
-    //                if (DriveMode == GpioPinDriveMode.Input)
-    //                    dir = PinDirection.Input;
-    //                else if (DriveMode == GpioPinDriveMode.Output)
-    //                    dir = PinDirection.Output;
-    //                else
-    //                    throw new NotImplementedException("Drive mode dell'I/O non ancora possibile con Mono");
+                // test two digital outputs
+                Console.WriteLine("\r\nLED 1: Canale {0}, Valore: {1} ",
+                    pinOut1.connectorPin.ToString(), pinIn1.Read().ToString());
+                pinOut1.Write(pinIn1.Read());
+                Console.WriteLine("LED 2: Canale {0}, Valore: {1} ",
+                    pinOut2.connectorPin.ToString(), pinIn2.Read().ToString());
+                pinOut2.Write(pinIn2.Read());
 
-    //                driver.Allocate(processorPin, dir);
-    //            }
-    //            catch
-    //            { // se quel pin non c'è nel Raspberry che uso, dà errore
-    //            }
-    //        }
-    //    }
-    //    public GpioPinValue Read()
-    //    {
-    //        if (driver.Read(processorPin))
-    //            return GpioPinValue.High;
-    //        else
-    //            return GpioPinValue.Low;
-    //    }
+                //ActuateShiftRegister();
 
-    //    public void Write(GpioPinValue value)
-    //    {
-    //        if (value == GpioPinValue.High)
-    //            driver.Write(processorPin, true);
-    //        else
-    //            driver.Write(processorPin, false);
-    //    }
+                Thread.Sleep(500);
+            }
+        }
+        private static List<DigitalIO> RicercaPin()
+        {
+            // ricerca di tutti i pin possibili nella Raspberry che stiamo usando
+            List<DigitalIO> pinTuttiIn = new List<DigitalIO>();
 
-    //    public void Wait(bool waitForUp, System.TimeSpan Timeout)
-    //    {
-    //        driver.Wait(processorPin, waitForUp, Timeout);
-    //    }
+            foreach (ConnectorPin pin in Enum.GetValues(typeof(ConnectorPin)))
+            {
+                pinTuttiIn.Add(new DigitalIO(pin, GpioPinDriveMode.Input));
+                Console.Write("{0} ", Enum.GetName(typeof(ConnectorPin), pin));                
+            }
 
-    //}
-    ///// <summary>
-    ///// Enum per il modo di controllo di un IO digitale
-    ///// Enum uguale a quello di Win 10 IoT, per migliore compatibilità
-    ///// </summary>
-    //public enum GpioPinDriveMode
-    //{
-    //    Input,
-    //    InputPullDown,
-    //    InputPullUp,
-    //    Output,
-    //    OutputOpenDrain,
-    //    OutputOpenDrainPullUp,
-    //    OutputOpenSource,
-    //    OutputOpenSourcePullDown,
-    //}
-    ///// <summary>
-    ///// Enum per i valori ammessi in un IO digitale
-    ///// Enum uguale a quello di Win 10 IoT, per migliore compatibilità
-    ///// </summary>
-    //public enum GpioPinValue
-    //{
-    //    High,
-    //    Low
-    //}
+            return pinTuttiIn;
+        }
+    }
 }
