@@ -62,6 +62,9 @@ Global
 		GrowBoxSharedMono\GrowBoxShared.projitems*{dd24d63d-1573-445d-8f43-d27901bd7d6a}*SharedItemsImports = 4
 		GrowBoxShared\GrowBoxShared.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
 		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{cdf30da5-dac8-4eb2-8e0e-366d6e6ee0bd}*SharedItemsImports = 4
+		GrowBoxShared\GrowBoxShared.projitems*{efdbd74f-9949-4c27-bffa-4a512f5fa985}*SharedItemsImports = 4
+		GrowboxSharedWinIoT\GrowboxSharedWinIoT.projitems*{efdbd74f-9949-4c27-bffa-4a512f5fa985}*SharedItemsImports = 4
+		GrowBoxSharedMono\GrowBoxShared.projitems*{efdbd74f-9949-4c27-bffa-4a512f5fa985}*SharedItemsImports = 4
 		GrowBoxShared\GrowBoxShared.projitems*{70a04fc3-6c19-417a-bfea-5ecfe7c18c0c}*SharedItemsImports = 4
 		GrowBoxSharedMono\GrowBoxShared.projitems*{70a04fc3-6c19-417a-bfea-5ecfe7c18c0c}*SharedItemsImports = 4
 	EndGlobalSection
