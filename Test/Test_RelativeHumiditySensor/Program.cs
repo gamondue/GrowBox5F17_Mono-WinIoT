@@ -13,11 +13,11 @@ namespace Test_RelativeHumiditySensor
     {
         static void Main(string[] args)
         {
-            RelativeHumiditySensor hum = new RelativeHumiditySensor(new DigitalConverterMCP3208(), 3, 5.0);
+            RelativeHumiditySensor hum = new RelativeHumiditySensor(new DigitalConverterMCP3208(), 4, 5.0);
 
             while (true)
             {
-                Console.WriteLine(hum.Read());
+                Console.WriteLine("Umidità = " + hum.Read() + " % ");
                 Thread.Sleep(500);
             }
             

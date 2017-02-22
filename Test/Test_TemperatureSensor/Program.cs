@@ -14,11 +14,11 @@ namespace Test_TemperatureSensor
         static void Main(string[] args)
         {
             DigitalConverterMCP3208 ADC = new DigitalConverterMCP3208();
-            TemperatureSensor tmp = new TemperatureSensor(ADC, 3);
+            TemperatureSensor tmp = new TemperatureSensor(ADC, 1);
 
             while (true)
             {
-                Console.WriteLine(tmp.Read());
+                Console.WriteLine("Temperatura = " + tmp.Read() + "° C");
                 Thread.Sleep(500);
             }
             
