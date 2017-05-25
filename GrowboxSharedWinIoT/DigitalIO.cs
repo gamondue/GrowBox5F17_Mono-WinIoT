@@ -13,6 +13,7 @@ namespace GrowBoxShared
     class DigitalIO
     {
         private GpioPin _GpioPin;
+        // commento inutile
 
         /// <summary>
         /// Costruttore che richiede il canale da usare e la direzione dell'IO
